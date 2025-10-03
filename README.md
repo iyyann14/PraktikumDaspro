@@ -1,0 +1,1 @@
+hai cantik, ini adalah repository pertamaku
