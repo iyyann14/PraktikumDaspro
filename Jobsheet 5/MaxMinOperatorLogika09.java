@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class MaxMinOperatorLogika09 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         int A, B, C;
         int max, min;
 
         System.out.print("Masukkan bilangan A: ");
-        A = input.nextInt();
+        A = sc.nextInt();
         System.out.print("Masukkan bilangan B: ");
-        B = input.nextInt();
+        B = sc.nextInt();
         System.out.print("Masukkan bilangan C: ");
-        C = input.nextInt();
+        C = sc.nextInt();
 
-        // Menentukan bilangan maksimum menggunakan operator logika
+        // Menentukan bilangan maksimum 
         if ((A >= B) && (A >= C)) {
             max = A;
         } else if ((B >= A) && (B >= C)) {
@@ -23,7 +23,7 @@ public class MaxMinOperatorLogika09 {
             max = C;
         }
 
-        // Menentukan bilangan minimum menggunakan operator logika
+        // Menentukan bilangan minimum 
         if ((A <= B) && (A <= C)) {
             min = A;
         } else if ((B <= A) && (B <= C)) {
