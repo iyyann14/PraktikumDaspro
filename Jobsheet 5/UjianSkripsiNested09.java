@@ -7,7 +7,7 @@ public class UjianSkripsiNested09 {
 
          String pesan;
 
-         System.out.println("Apakah mahasiswa sudah bebas kompen? (ya/tidak): ");
+         System.out.println("Apakah mahasiswa sudah bebas kompen? (yes/no): ");
          String bebasKompen = sc.nextLine(). trim();
 
          System.out.print("Masukkan jumlah log bimbingan Pembimbing 1: ");
