@@ -33,19 +33,20 @@ public class percetakan9 {
             return;
         }
 
-        // if else kota
-        if (kota.equalsIgnoreCase("Malang") || kota.equalsIgnoreCase("Batu")) {
-            int biayaKirim = 20000;
-        } else {
-            int beratKg = 0;
-            double biayaKirim = beratKg * 15000;
-        }
-
         // proses
         double beratKertas = halaman * 1.5;
         double beratTotal = beratKertas + beratCover + 300;
         double beratKg = Math.ceil(beratTotal / 1000);
-        double biayaKirim = beratKg * 15000;
+
+        double biayaKirim;
+
+        // if else kota
+        if (kota.equalsIgnoreCase("Malang") || kota.equalsIgnoreCase("Batu")) {
+            biayaKirim = 20000;
+        } else {
+            double biayaKirim = beratKg * 15000;
+        }
+
         double total = biayaCetak + biayaCover + biayaKirim;
 
         // output
