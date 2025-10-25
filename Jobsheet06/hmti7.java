@@ -17,7 +17,7 @@ public class hmti7 {
 
         double persenPolinema = 0;
 
-        // proses
+        // input
         if (bantuan.equalsIgnoreCase("ya")) {
             System.out.print("Masukkan Persentase Bantuan (1-100): ");
             int pilihan = sc.nextInt();
@@ -26,39 +26,36 @@ public class hmti7 {
             switch (pilihan) {
                 case 60:
                     persenPolinema = 60;
-                    break;
                 case 70:
                     persenPolinema = 70;
-                    break;
                 case 80:
                     persenPolinema = 80;
-                    break;
                 default:
-                    if (pilihan >= 1 && pilihan <= 90) {
-                        // Biaya tetap
+                    if (pilihan >= 1 && pilihan <= 99) {
+                        persenPolinema = pilihan;
+                        //Biaya tetap
                         double publikasi = 300000;
                         double dekorasi = 500000;
                         double konsumsiPanitia = 500000;
                         double hadiah = 4000000;
                         double operasional = 500000;
 
-                        // Biaya berdasarkan jumlah tim
+                        //Biaya jumlah tim
                         int jumlahPeserta = jumlahTim * 3;
                         double konsumsiPeserta = 25000 * jumlahPeserta;
                         double honorJuri = 75000 * jumlahTim;
 
-                        // Total anggaran
+                        //Total anggaran
                         double total = publikasi + dekorasi + konsumsiPanitia + hadiah + operasional
                                 + konsumsiPeserta + honorJuri;
 
-                        // Hitung sumber dana
+                        //Hitung sumber dana
                         double danaPolinema = total * (persenPolinema / 100);
                         double pendaftaran = 50000 * jumlahTim;
                         double sponsor = total - (danaPolinema + pendaftaran);
 
                         // output
                         System.out.println("Biaya Sponsor: " + sponsor);
-                        persenPolinema = pilihan;
                     } else {
                         System.out.println("Tidak Perlu Memberikan Bantuan");
                         persenPolinema = 0;
