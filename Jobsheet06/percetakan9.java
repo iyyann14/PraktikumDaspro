@@ -29,7 +29,7 @@ public class percetakan9 {
             beratCover = 100;
 
         } else {
-            System.out.println("Jenis Cover Tidak Valid"); 
+            System.out.println("Jenis Cover Tidak Valid");
             return;
         }
 
@@ -38,13 +38,16 @@ public class percetakan9 {
         double beratTotal = beratKertas + beratCover + 300;
         double beratKg = Math.ceil(beratTotal / 1000);
 
-        double biayaKirim;
+        double biayaKirim = 0;
 
         // if else kota
         if (kota.equalsIgnoreCase("Malang") || kota.equalsIgnoreCase("Batu")) {
             biayaKirim = 20000;
+            System.out.println("Anda dikenakan biaya pengiriman sebesar Rp. 20.000");
         } else {
-            double biayaKirim = beratKg * 15000;
+            double hargaKirim = beratKg * 15000;
+            System.out.println("Anda dikenakan biaya pengiriman sebesar Rp. 15.000");
+            double total = biayaCetak + biayaCover + hargaKirim;
         }
 
         double total = biayaCetak + biayaCover + biayaKirim;
