@@ -24,20 +24,14 @@ public class hmti7 {
 
             // switch case
             switch (pilihan) {
-                case 10:
-                    persenPolinema = 10;
+                case 60:
+                    persenPolinema = 60;
                     break;
-                case 15:
-                    persenPolinema = 15;
+                case 70:
+                    persenPolinema = 70;
                     break;
-                case 25:
-                    persenPolinema = 25;
-                    break;
-                case 50:
-                    persenPolinema = 50;
-                    break;
-                case 90:
-                    persenPolinema = 90;
+                case 80:
+                    persenPolinema = 80;
                     break;
                 default:
                     if (pilihan >= 1 && pilihan <= 90) {
