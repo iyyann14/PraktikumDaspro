@@ -7,7 +7,7 @@ public class ProgramParkir09 {
         int jenis, durasi, total = 0;
         System.out.print("Masukkan Jenis Kendaraan (1 Mobil, 2 Motor, 0 Keluar): ");
         jenis = sc.nextInt();
-
+        
         while (jenis != 0) {
             if (jenis == 1 || jenis == 2) {
                 System.out.print("Masukkan Durasi Parkir (jam): ");
