@@ -5,9 +5,9 @@ public class ModifNilaiKel09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        double totalNilai;
-        double rataNilai;
-        double rataTertinggi = 0;
+        float totalNilai;
+        float rataNilai;
+        float rataTertinggi = 0;
         int kelompokTertinggi = 0;
 
         // Modif FOR
@@ -31,8 +31,7 @@ public class ModifNilaiKel09 {
                 kelompokTertinggi = i;
             }
         }
-
-        System.out.println("Kelompok dengan rata-rata tertinggi adalah Kelompok " 
-                           + kelompokTertinggi + " dengan rata-rata " + rataTertinggi);
+        System.out.println("========================");
+        System.out.println("Kelompok dengan rata-rata tertinggi adalah Kelompok " + kelompokTertinggi + " dengan rata-rata " + rataTertinggi);
     }
 }
