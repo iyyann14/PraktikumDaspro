@@ -4,40 +4,37 @@ public class Siakad09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[][] nilai = new int[4][3];
-                // for (int i = 0; i < nilai.length; i++) {
-            //System.out.println("Input Nilai Mahasiswa Ke-" + (i + 1));
+        System.out.print("Masukkan Jumlah Mahasiswa: ");
+        int jmlMahasiswa = sc.nextInt();
 
-            //for (int j = 0; j < nilai[i].length; i++) {
-              //  System.out.print("Nilai Mata Kuliah " + (j + 1) + ": ");
-                //nilai[i][j] = sc.nextInt();
-            //}
-       // }
+        System.out.print("Masukkan Jumlah Matkul: ");
+        int jmlMatkul = sc.nextInt();
 
-        for (int i = 0; i < nilai.length; i++) {
-            System.out.println("Input Nilai Mahasiswa Ke-" + (i + 1));
+        int[][] nilai = new int[jmlMahasiswa][jmlMatkul];
+
+        for (int i = 0; i < jmlMahasiswa; i++) {
+            System.out.println("\nInput Nilai Mahasiswa Ke-" + (i + 1));
             double totalPerSiswa = 0;
 
-            for (int j = 0; j < nilai[i].length; j++) {
+            for (int j = 0; j < jmlMatkul; j++) {
                 System.out.print("Nilai Mata Kuliah " + (j + 1) + ": ");
                 nilai[i][j] = sc.nextInt();
                 totalPerSiswa += nilai[i][j];
             }
 
-            System.out.println("Nilai Rata-Rata: " + totalPerSiswa / 3);
+            System.out.println("Nilai Rata-Rata: " + (totalPerSiswa / jmlMatkul));
         }
 
-        System.out.println("\n===================================");
+        System.out.println("\n=====================================");
         System.out.println("Rata-Rata Nilai Setiap Mata Kuliah: ");
 
-        for (int j = 0; j < 3; j++) {
+        for (int j = 0; j < jmlMatkul; j++) {
             double totalPerMatkul = 0;
 
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < jmlMahasiswa; i++) {
                 totalPerMatkul += nilai[i][j];
             }
-
-            System.out.println("Mata Kuliah " + (j + 1) + ": " + totalPerMatkul / 4);
+            System.out.println("Mata Kuliah " + (j + 1) + ": " + (totalPerMatkul / jmlMahasiswa));
         }
     }
 }
