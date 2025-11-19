@@ -27,7 +27,7 @@ public class SeacrhNilai09 {
         System.out.println();
 
         if (hasil != -1) {
-            System.out.println("Nilai" + key + " ketemu, merupakan nilai mahasiswa ke-" + (hasil+1));
+            System.out.println("Nilai " + key + " ketemu, merupakan nilai mahasiswa ke-" + (hasil+1));
         } else {
             System.out.println("Nilai yang dicari tidak ditemukan");
         }
