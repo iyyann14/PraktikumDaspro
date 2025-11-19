@@ -5,13 +5,13 @@ public class Siakad09 {
         Scanner sc = new Scanner(System.in);
 
         int[][] nilai = new int[4][3];
-        //for (int i = 0; i < nilai.length; i++) {
+                // for (int i = 0; i < nilai.length; i++) {
             //System.out.println("Input Nilai Mahasiswa Ke-" + (i + 1));
 
             //for (int j = 0; j < nilai[i].length; i++) {
               //  System.out.print("Nilai Mata Kuliah " + (j + 1) + ": ");
-            //    nilai[i][j] = sc.nextInt();
-           // }
+                //nilai[i][j] = sc.nextInt();
+            //}
        // }
 
         for (int i = 0; i < nilai.length; i++) {
