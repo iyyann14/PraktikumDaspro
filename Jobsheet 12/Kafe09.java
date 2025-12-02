@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Kafe09 {
-    String[] daftarMenu = {"Kopi Hitam", "Cappucino", "Latte", "Teh Tarik", "Roti Bakar", "Mie Goreng"}
-    
+    String[] daftarMenu = {"Kopi Hitam", "Cappucino", "Latte", "Teh Tarik", "Roti Bakar", "Mie Goreng"};
+
         public static void Menu(String namaPelanggan, boolean isMember) {
             System.out.println("Selamat Datang, " + namaPelanggan + "!");
 
@@ -22,6 +22,6 @@ public class Kafe09 {
     }
 
     public static void main(String[] args) {
-        Menu();
+        Menu("Andi", true);
     }
 }
