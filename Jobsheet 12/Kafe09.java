@@ -3,11 +3,21 @@ import java.util.Scanner;
 public class Kafe09 {
     String[] daftarMenu = {"Kopi Hitam", "Cappucino", "Latte", "Teh Tarik", "Roti Bakar", "Mie Goreng"};
 
-        public static void Menu(String namaPelanggan, boolean isMember) {
+        public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
             System.out.println("Selamat Datang, " + namaPelanggan + "!");
 
             if (isMember) {
                 System.out.println("Anda Adalah Member, Dapatkan Diskon 10% Untuk Setaip Pembelian!");
+            }
+
+            if (kodePromo != null && kodePromo.equals("DISKON50")) {
+                System.out.println("Anda Mendapatkan Diskon 50%!");
+            } else if (kodePromo != null && kodePromo.equals("DISKON30")) {
+                System.out.println("Anda Mendapatkan Diskon 30%!");
+            } else if (kodePromo == null || kodePromo.isEmpty()) {
+                System.out.println("Tidak Ada Kode Promo");
+            } else {
+                System.out.println("Promo Tidak Valid");
             }
 
         System.out.println("==== MENU KAFE RESTO ====");
@@ -22,6 +32,6 @@ public class Kafe09 {
     }
 
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Budi", true, "DISKON30");
     }
 }
