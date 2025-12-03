@@ -15,11 +15,22 @@ public class HitungBalok09 {
         System.out.print("Masukkan Tinggi: ");
         t = sc.nextInt();
 
-        L = p * l;
+        L = hitungLuas(p, l);
         System.out.println("Luas Persegi Panjang Adalah " + L + "cm2");
-        vol = p * l * t;
+        
+        vol = hitungVolume(t, p, l);
         System.out.println("Volume Balok Adalah " + vol + "cm3");
 
         sc.close();
+    }
+
+    static int hitungLuas(int pjg, int lb) {
+        int Luas = pjg * lb;
+        return Luas;
+    }
+
+    static int hitungVolume(int tinggi, int a, int b) {
+        int volume = hitungLuas(a, b) * tinggi;
+        return volume;
     }
 }
